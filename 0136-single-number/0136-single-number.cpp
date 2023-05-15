@@ -1,10 +1,12 @@
 class Solution {
 public:
-    int singleNumber(vector<int>& nums) {
-        int res = 0;
-        for(int x: nums) {
-            res ^= x;
+    int singleNumber(vector<int>& nums)
+    {
+        short r = 0;
+        for(int x: nums)
+        {
+            r ^= x;
         }
-        return res;
+        return r;
     }
 };
