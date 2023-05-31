@@ -24,13 +24,13 @@ public:
             c++;
             loc1=loc1->next;
         }
-        if(c==1 && n==1)
+        /*if(c==1 && n==1) //only one element in the list
         {
             return NULL;
-        }
-        if(c==n)
+        }*/
+        if(c==n) //if its the last node
         {
-            if(head->next==NULL)
+            if(head->next==NULL) 
             {
                 return NULL;
             }
