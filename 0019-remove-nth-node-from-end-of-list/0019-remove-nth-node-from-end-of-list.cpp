@@ -11,12 +11,9 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n)
-    {
-        int  c=0;
+    {int  c=0;
         if(head==NULL)
-        {
             return NULL;
-        }
         struct ListNode *loc1=head;
         struct ListNode *loc2=head;
         while(loc1!=NULL) // counting total length;
@@ -24,12 +21,12 @@ public:
             c++;
             loc1=loc1->next;
         }
-        if(c==n) //if there is only one element.
+        if(c==1 && n==1)
+            return NULL;
+        if(c==n)
         {
-            if(head->next==NULL) 
-            {
+            if(head->next==NULL)
                 return NULL;
-            }
             else
             {
                 head=head->next;
