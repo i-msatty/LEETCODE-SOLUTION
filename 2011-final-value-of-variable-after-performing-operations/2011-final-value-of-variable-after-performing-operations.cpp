@@ -7,7 +7,7 @@ public:
         {
             if(operations[i]=="++X"||operations[i]=="X++")
                 X=X+1;
-            else if(operations[i]=="--X"||operations[i]=="X--")
+            else //if(operations[i]=="--X"||operations[i]=="X--")
                 X=X-1;
         }
         return X;
