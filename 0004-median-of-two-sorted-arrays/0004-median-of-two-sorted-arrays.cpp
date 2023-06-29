@@ -2,7 +2,6 @@ class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) 
     {
-        vector<int> c;
         int i=0;
         for(i=0;i<nums2.size();i++)
         {
@@ -16,7 +15,7 @@ public:
         }
         else
         {
-            double median= nums1[size/2]+nums1[(size/2)-1];
+            double median=(nums1[size/2]+nums1[(size/2)-1]);
             return median/2;
         }
     }
