@@ -15,9 +15,7 @@ public:
         if(head==NULL)
             return NULL;
         while(head!=NULL && head->val==val)
-        {
             head=head->next;  
-        }
         ListNode *loc=head;
         while(loc!=NULL)
         {
@@ -28,14 +26,10 @@ public:
                     continue;
                 }
                 else
-                {
                     loc->next=NULL;
-                }
             }
             else
-            {
                 loc=loc->next;
-            }
         }
         return head;
     }
