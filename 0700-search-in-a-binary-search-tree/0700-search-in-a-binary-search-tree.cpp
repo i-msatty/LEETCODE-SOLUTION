@@ -36,6 +36,5 @@ public:
                 return search(root->right,val);
             }
         }
-        //return root;
     }
 };
