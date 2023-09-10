@@ -1,7 +1,8 @@
 int arr[1001][4];
 class Solution {
 public:
-    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) 
+    {
             vector<int> returning;
             set<int> s;
             int i;
