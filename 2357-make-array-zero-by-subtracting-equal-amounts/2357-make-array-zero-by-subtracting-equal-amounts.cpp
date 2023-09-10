@@ -1,5 +1,6 @@
 class Solution {
     int count=0;
+        int size=0;
 public:
 bool do_check(vector<int> nums) //checks whether vector became zero or not
 {
@@ -17,18 +18,20 @@ bool do_check(vector<int> nums) //checks whether vector became zero or not
         if(nums.size()==0)//if array is empty
                 return 0;
         //if not empty then
+        size=nums.size();
+        cout<<"no of element is "<<size<<endl;
         while(do_check(nums)!=0)
         {
                 count++;
         // finds minimum non zero element
-        for(i=0;i<nums.size();i++)
+        for(i=0;i<size;i++)
         {
             if(nums[i]!=0 && nums[i]<min)
                 min=nums[i];
         }       
                // cout<<"minimum at "<<count<<"is "<<min<<endl;
           // performs the operation
-          for(i=0;i<nums.size() ;i++)
+          for(i=0;i<size;i++)
         { 
                 if(nums[i]==0)
                         continue;
