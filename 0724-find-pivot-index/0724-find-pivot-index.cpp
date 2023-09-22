@@ -3,11 +3,12 @@ public:
     int pivotIndex(vector<int>& nums) {
         int leftsum=0,rightsum=0;
         int i;
-        for(i=0;i<nums.size();i++)
+        int size=nums.size();
+        for(i=0;i<size;i++)
         {
             rightsum+=nums[i];
         }       
-        for(i=0;i<nums.size();i++)
+        for(i=0;i<size;i++)
         {
             if(i==0){
                 rightsum-=nums[i];
@@ -20,10 +21,6 @@ public:
                 rightsum-=nums[i];
                 if(leftsum==rightsum)
                     return i;
-            }
-            else
-            {
-                continue;    
             }
         }
         return -1;
