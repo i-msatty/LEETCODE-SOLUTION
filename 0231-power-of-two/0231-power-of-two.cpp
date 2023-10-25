@@ -5,6 +5,6 @@ public:
             return false;
         long long int  x= n;
         x-=1;
-        return (n && !(n&(x)));
+        return (n && !(n & (x)));
     }
 };
