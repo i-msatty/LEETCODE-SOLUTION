@@ -5,7 +5,8 @@ class Solution {
 public:
     int secondHighest(string s) {
         vector<int>num;
-        for(int i=0;i<s.length();i++)
+        int len=s.length();
+        for(int i=0;i<len;i++)
         {
             if(s[i]>=48 && s[i]<=57)
             { 
@@ -14,12 +15,12 @@ public:
             }
         }
         sort(num.begin(),num.end());
-        if(num.size()==1||num.size()==0)
+        int size=num.size();
+        if(size==1||size==0)
             return -1;
         else
         {
-            int temp=char(num[num.size()-2]);
-            return temp-48;
+            return num[size-2]-48;
         }
     }
 };
