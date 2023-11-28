@@ -1,0 +1,2 @@
+/* Write your PL/SQL query statement below */
+select customer_id,count(Visits.visit_id)-count(Transactions.visit_id) as count_no_trans from Visits left join Transactions on Visits.visit_id=Transactions.visit_id group by customer_id having count(Visits.visit_id)-count(Transactions.visit_id) != 0;
